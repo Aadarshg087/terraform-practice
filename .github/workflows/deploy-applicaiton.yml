@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 jobs:
-  Depoy-backend:
+  Deploy-Application:
     runs-on: ubuntu-latest
 
     steps:
