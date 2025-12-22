@@ -6,7 +6,7 @@ resource "aws_instance" "ec2-application" {
   user_data = <<-EOF
   #!/bin/bash
   sudo apt update -y
-  echo "hello" >> temp.txt
+  echo "hello" >> /temp.txt
   EOF
 
   vpc_security_group_ids = [aws_security_group.allow_comm.id]
