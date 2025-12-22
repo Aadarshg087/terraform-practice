@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "backend" {
   bucket        = "infra-state-file-bucket"
   region        = "us-east-1"
-  force_destroy = false
+  force_destroy = true
   tags = {
     Purpose     = "Learning"
     Environment = "Dev"

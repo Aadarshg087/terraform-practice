@@ -33,13 +33,16 @@ jobs:
         with:
           terraform_version: 1.6.6
 
-      - name: Terrafrom Plan
+      # - name: Terrafrom Plan
+      #   run: |
+      #     terraform init
+      #     terraform validate
+      #     terraform plan
+      # - name: Terraform apply
+      #   run: |
+      #     terraform apply --auto-approve
+
+      - name: Terrafrom Destroy
         run: |
-          terraform init
-          terraform validate
-          terraform plan
-    
-      - name: Terraform apply
-        run: |
-          terraform apply --auto-approve
+          terraform destroy --auto-approve
           
